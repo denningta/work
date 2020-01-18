@@ -7,10 +7,18 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/11f325d0f5.js" crossorigin="anonymous"></script>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
-
   <body>
-
-    <%= yield %>
+  <%= render 'layouts/top_navigation' %>
+    <div class="container-fluid">
+      <div class="row">
+        <%= render 'layouts/side_navigation' %>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <%= yield %>
+        </main>
+      </div>
+    </div>
   </body>
 </html>
