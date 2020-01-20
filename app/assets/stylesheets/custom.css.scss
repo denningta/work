@@ -42,3 +42,14 @@ html {
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  border:10px solid white;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}

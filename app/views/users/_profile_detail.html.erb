@@ -1,0 +1,27 @@
+<div class="card mt-3">
+  <div class="card-header">
+    <ul class="list-inline mb-0">
+        <li class="list-inline-item">
+            <i class="fas fa-address-card"></i> Profile Details
+        </li>
+        <li class="list-inline-item text-right">
+            Edit profile
+        </li>    
+    </ul>
+
+  </div>
+  <div class="card-body">
+    <div class="row">
+        <div class="col">
+            <div class="row">Name</div>
+            <div class="row">Email</div>
+            <div class="row">Phone</div>
+        </div>
+        <div class="col">
+            <div class="row"><%= @user.full_name %></div>
+            <div class="row"><%= @user.email %></div>
+            <div class="row">+1 920 545 9774</div>
+        </div>
+  </div>
+  </div>
+</div>

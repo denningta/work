@@ -11,12 +11,14 @@
     <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
   <body>
-  <%= render 'layouts/top_navigation' %>
+  <%= render 'dashboard/dashboard_top_navigation' %>
     <div class="container-fluid">
       <div class="row">
-        <%= render 'layouts/side_navigation' %>
+        <%= render 'dashboard/dashboard_side_navigation' %>
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          
           <%= yield %>
+
         </main>
       </div>
     </div>
