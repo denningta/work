@@ -25,7 +25,13 @@
         <a class="p-2 text-dark" href="#">Support</a>
         <a class="p-2 text-dark" href="#">Pricing</a>
       </nav>
-      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-outline-primary" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary" %>
+      <% if user_signed_in? %>
+        <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-outline-primary mx-2", method: :delete %>
+      <% else %>
+        <%= link_to "Log in", new_user_session_path, class: "btn btn-outline-primary mx-2" %>  
+      <% end %>
+      
     </div>
 
       <%= yield %>
