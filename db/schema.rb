@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_20_031052) do
+ActiveRecord::Schema.define(version: 2020_01_26_180331) do
+
+  create_table "resources_tables", force: :cascade do |t|
+    t.string "name"
+    t.string "room_number"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

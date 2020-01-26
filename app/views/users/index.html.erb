@@ -20,6 +20,7 @@
           <td>Permissions</td>
           <td>
             <%= link_to "View", user_path(user.id), class: "badge badge-success" %>
+            <%= link_to "Edit", edit_user_path(user.id), class: "badge badge-info" %>
           </td>
         </tr>
     <% end %>
