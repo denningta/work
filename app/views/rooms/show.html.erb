@@ -3,13 +3,13 @@
         <div class="resource-status-header">
             <h2>Avaliable</h2>
             <h6>For the next 55 minutes</h6>
-            <h1 class="text-center">7:35</h1>
-            <h6 class="text-center">Friday, 24 January</h6>
+            <h1 class="text-center"><%= @time_now %></h1>
+            <h6 class="text-center"><%= @date_now %></h6>
         </div>
         <div class="fixed-bottom px-4 my-5 pb-4">
             <div class="resorce-status-footer">
-                <h2>Mt. Evans</h2>
-                <h2>Room 102</h2>
+                <h2><%= @room.name %></h2>
+                <h2><%= @room.number %></h2>
             </div>
         </div>
     </div>
@@ -39,7 +39,7 @@
         
     </div>
     <div class="col-6 p-4">
-        <%= render 'resources/resource_daily_detail' %>
+        <%= render 'rooms/room_daily_detail' %>
     </div> 
 </div>
 

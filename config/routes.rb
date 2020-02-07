@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :index, :edit]
 
-  resources :resources
+  resources :rooms
+
+  resources :bookings
 
 end

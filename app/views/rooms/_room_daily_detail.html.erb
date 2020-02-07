@@ -11,14 +11,14 @@
             55 minutes
         </div>
     </div>
-
+<% @bookings.each do |booking| %>
     <div class="row booking-details mt-3">
         <div class="col-1 p-0">
             <div class="booked-shape status-in-queue"></div>
         </div>
         <div class="col">
             <div class="row">
-                8:30
+                <%= booking.start.strftime("%H:%M") %>
             </div>
             <div class="col-1">
             </div>
@@ -28,7 +28,7 @@
                         <i class="fas fa-user"></i>
                     </div> 
                     <div class="col pl-3">
-                        Pretty Darn Complicated LLC
+                        <%= booking.user.full_name %>
                     </div>
                 </div>
                 <div class="row pb-3">
@@ -36,19 +36,21 @@
                         <i class="fas fa-align-justify"></i>    
                     </div>
                     <div class="col pl-3">
-                        Weekly Sales Sync
+                        <%= booking.description %>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                9:30
+                <%= booking.end.strftime("%H:%M") %>
             </div>
         </div>
         <div class="col-1 mr-5 mt-5 booking-content">
             <i class="fas fa-redo"></i>
         </div>
     </div>
+<% end %>
+<!-- 
 
     <div class="row booking-details mt-3">
         <div class="col-1 p-0 m-auto">
@@ -196,6 +198,6 @@
             
         </div>
     </div>
-
+ -->
 
 </div>
