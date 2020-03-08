@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+
   layout :resolve_layout
 
   def index
@@ -14,8 +15,7 @@ class RoomsController < ApplicationController
     @time_now = datetime_now.strftime("%-H:%M")
 
     @bookings = @room.bookings.order('start').where(start: datetime_now.all_day)
-
-    @first_gap = @bookings.first.start.to_time
+    booking_ids_ordered = @room.bookings.order('start').where(start: datetime_now.all_day).ids
 
   end
 

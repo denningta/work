@@ -10,6 +10,7 @@ gem "font-awesome-rails"
 gem 'feathericon-sass'
 gem 'chart-js-rails'
 gem 'hirb'
+gem 'order_as_specified'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
